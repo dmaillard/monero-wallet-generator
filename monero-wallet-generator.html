@@ -15,23 +15,23 @@
  */
 
 // Copyright (c) 2014-2015, MyMonero.com
-// 
+//
 // All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without modification, are
 // permitted provided that the following conditions are met:
-// 
+//
 // 1. Redistributions of source code must retain the above copyright notice, this list of
 //    conditions and the following disclaimer.
-// 
+//
 // 2. Redistributions in binary form must reproduce the above copyright notice, this list
 //    of conditions and the following disclaimer in the documentation and/or other
 //    materials provided with the distribution.
-// 
+//
 // 3. Neither the name of the copyright holder nor the names of its contributors may be
 //    used to endorse or promote products derived from this software without specific
 //    prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 // EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
@@ -10187,8 +10187,8 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   var PADDING = [6, 1536, 393216, 100663296];
   var SHIFT = [0, 8, 16, 24];
   var RC = [1, 0, 32898, 0, 32906, 2147483648, 2147516416, 2147483648, 32907, 0, 2147483649,
-            0, 2147516545, 2147483648, 32777, 2147483648, 138, 0, 136, 0, 2147516425, 0, 
-            2147483658, 0, 2147516555, 0, 139, 2147483648, 32905, 2147483648, 32771, 
+            0, 2147516545, 2147483648, 32777, 2147483648, 138, 0, 136, 0, 2147516425, 0,
+            2147483658, 0, 2147516555, 0, 139, 2147483648, 32905, 2147483648, 32771,
             2147483648, 32770, 2147483648, 128, 2147483648, 32778, 0, 2147483658, 2147483648,
             2147516545, 2147483648, 32896, 2147483648, 2147483649, 0, 2147516424, 2147483648];
   var BITS = [224, 256, 384, 512];
@@ -10278,9 +10278,9 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
     if(notString && message.constructor == root.ArrayBuffer) {
       message = new Uint8Array(message);
     }
-    var length = message.length, blocks = this.blocks, byteCount = this.byteCount, 
+    var length = message.length, blocks = this.blocks, byteCount = this.byteCount,
         blockCount = this.blockCount, index = 0, s = this.s, i, code;
-    
+
     while(index < length) {
       if(this.reset) {
         this.reset = false;
@@ -10349,7 +10349,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   Keccak.prototype.toString = Keccak.prototype.hex = function() {
     this.finalize();
 
-    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks, 
+    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks,
         extraBytes = this.extraBytes, i = 0, j = 0;
     var hex = '', block;
     while(j < outputBlocks) {
@@ -10382,7 +10382,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   Keccak.prototype.buffer = function() {
     this.finalize();
 
-    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks, 
+    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks,
         extraBytes = this.extraBytes, i = 0, j = 0;
     var bytes = this.outputBits >> 3;
     var buffer;
@@ -10410,7 +10410,7 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   Keccak.prototype.digest = Keccak.prototype.array = function() {
     this.finalize();
 
-    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks, 
+    var blockCount = this.blockCount, s = this.s, outputBlocks = this.outputBlocks,
         extraBytes = this.extraBytes, i = 0, j = 0;
     var array = [], offset, block;
     while(j < outputBlocks) {
@@ -10443,9 +10443,9 @@ var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this
   };
 
   var f = function(s) {
-    var h, l, n, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, 
-        b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, 
-        b18, b19, b20, b21, b22, b23, b24, b25, b26, b27, b28, b29, b30, b31, b32, b33, 
+    var h, l, n, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9,
+        b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17,
+        b18, b19, b20, b21, b22, b23, b24, b25, b26, b27, b28, b29, b30, b31, b32, b33,
         b34, b35, b36, b37, b38, b39, b40, b41, b42, b43, b44, b45, b46, b47, b48, b49;
     for(n = 0; n < 48; n += 2) {
       c0 = s[0] ^ s[10] ^ s[20] ^ s[30] ^ s[40];
@@ -10659,6 +10659,7 @@ html { font-family: sans-serif }
 <nav class="grey lighten-3">
     <div class="nav-wrapper">
         <a href="#" class="brand-logo center">
+            <h4 style="color: #555;">UaiCoin Offline Wallet Generator</h4>
             <img style="height:60px;" src="data:image/svg+xml;base64,
 PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk
 b2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246
@@ -10716,7 +10717,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
 <div class="row">&nbsp;</div>
 <div class="row center-align">
     <div class="col s12">
-        <h4 style="color: #555;">Offline wallet generator</h4>
+        <h4 style="color: #555;">UaiCoin Offline Wallet Generator</h4>
     </div>
 </div>
 
@@ -10725,7 +10726,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
         <div class="col s12">
             <p>
                 This page generates a new
-                <select onchange="js:setCoin(this.selectedIndex);" class="waves-effect waves-light btn" style="max-width: 20%">
+                <select onchange="js:setCoin(this.selectedIndex);" class="waves-effect waves-light btn" style="max-width: 20%;display:none;">
                   <option>Monero</option>
                   <option>Aeon</option>
                 </select>
@@ -10755,20 +10756,20 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
             </form>
         </div>
     </div>
-    <div class="row center-align">
+    <!--<div class="row center-align">
         <div class="col s12">
             <form>
                 <input class="waves-effect waves-light btn" type="button" onclick="js:genwallet('english');" value="English" action=""/ id=lang_en>
-                <input class="waves-effect waves-light btn" type="button" onclick="js:genwallet('spanish');" value="Spanish" action=""/ id=lang_es>
+                <input class="waves-effect waves-light btn" type="button" onclick="js:genwallet('spanish');" value="Spanish" action=""/ id=lang_es>-->
                 <!-- portuguese word list has a few prefix collisions
                       <input type="button" onclick="js:genwallet('portuguese');" value="Portuguese" action=""/ id=lang_pt>
                 -->
-                <input class="waves-effect waves-light btn" type="button" onclick="js:genwallet('japanese');" value="Japanese" action=""/ id=lang_jp>
+                <!--<input class="waves-effect waves-light btn" type="button" onclick="js:genwallet('japanese');" value="Japanese" action=""/ id=lang_jp>
                 <br>
                 <font size="-1">(restoring non English language seeds needs a recent simplewallet)</font>
             </form>
         </div>
-    </div>
+    </div>-->
     <div class="row">
         <div class="col s12">
             <div class="card light-green lighten-5">
@@ -10859,7 +10860,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                 <br>
                 Thanks, and welcome to Monero!
                 </p>
-<h5 id="gpg-instructions">How to verify GPG signatures</h5>
+<!--<h5 id="gpg-instructions">How to verify GPG signatures</h5>
 
 <p>
 All released versions of this page will be GPG signed by moneromooo, to avoid trojaned versions
@@ -10945,7 +10946,7 @@ gpg: Good signature from "moneromooo-monero &lt;moneromooo-monero@users.noreply.
 Check the signature is from the key you imported previously! If not, you may be checking
 that file was properly signed by an attacker instead of moneromooo. Beware that anyone can
 place any email address in a new GPG key, so the right email being shown is no guarantee.
-</p>
+</p>-->
 </div>
             </div>
     </div>
