@@ -10656,11 +10656,11 @@ html { font-family: sans-serif }
 }
 </style>
 
-<nav class="grey lighten-3">
+<nav class="grey lighten-3" style="height: 80px;line-height: 80px;">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">
-            <h4 style="color: #555;">UaiCoin Offline Wallet Generator</h4>
-            <img style="height:60px;" src="data:image/svg+xml;base64,
+        <a href="https://uaicoin.github.io/" class="brand-logo center">
+            <img src="https://raw.githubusercontent.com/uaicoin/branding/master/UaiCoin%20White.png" style="max-height: 75px;">
+            <!--<img style="height:60px;" src="data:image/svg+xml;base64,
 PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFk
 b2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246
 IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZH
@@ -10708,7 +10708,7 @@ LTcuNWMxLjktMiw0LjMtMyw3LjItM2MyLjgsMCw1LjIsMSw3LjIsM2MyLDIsMyw0LjUsMyw3LjRD
 MzA1LjcsMzI5LjcsMzA0LjcsMzMyLjEsMzAyLjgsMzM0LjF6Ii8+Cgk8cGF0aCBpZD0iXzc0NzQ5
 MDg4XzJfIiBmaWxsPSIjNEM0QzRDIiBkPSJNMjQ0LjgsMzEwLjZoNmw3LjUsMjIuNmw3LjYtMjIu
 Nmg1LjlsNS40LDMyLjNoLTUuOWwtMy41LTIwLjRsLTYuOSwyMC40aC01LjRsLTYuOC0yMC40CgkJ
-bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
+bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">-->
         </a>
 
     </div>
@@ -10733,28 +10733,28 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                 wallet. It is self contained and
                 does all the necessary calculations locally, so is suitable for generating a new wallet on a machine
                 that is not connected to the network, and may even never be. This way, you can create
-                a Monero/Aeon wallet without risking the keys. This file is GPG signed, see <a href="#gpg-instructions">GPG instructions</a>.
+                a UaiCoin wallet without risking the keys. <!--This file is GPG signed, see <a href="#gpg-instructions">GPG instructions</a>.
                 You can check for up to date versions of this page
-                <a href="https://github.com/moneromooo-monero/monero-wallet-generator/blob/master/monero-wallet-generator.html">here</a>.
+                <a href="https://github.com/moneromooo-monero/monero-wallet-generator/blob/master/monero-wallet-generator.html">here</a>.-->
             </p>
         </div>
     </div>
-    <div class="row valign-wrapper">
-        <div class="col s4 right-align ">
+    <div class="row center-align valign-wrapper" style="max-width:600px;">
+        <div class="col s12">
                 <input class="btn orange" type="button" onclick="js:genwallet(null);"
                        value="Generate wallet" id="gen_with_custom_entropy_button" action=""/>
                 <p>Custom entropy for deterministic wallet (leave empty to use the browser's PRNG)</p>
                 <input type="text" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
                 <div style="color: red; display: none" id="user_entropy_warning_widget">WARNING: entropy is way too low for the wallet to be secure: aim for 256 bits (about a hundred dice throws)</div>
         </div>
-        <div class="col s1 offset-s1"><h4>or</h4></div>
+        <!--<div class="col s1 offset-s1"><h4>or</h4></div>
         <div class="col s5 offset-s1">
             <form>
                 <input class="btn deep-orange" type="button" onclick="js:genwallet_prefix();" value="Generate wallet with prefix" action="" id="gen_prefix_widget"/>
                 <p>(very slow for more than a few characters)</p>
                 <input type="text" value="4" id="prefix_widget" oninput="js:check_prefix_validity()"; />
             </form>
-        </div>
+        </div>-->
     </div>
     <!--<div class="row center-align">
         <div class="col s12">
@@ -10780,7 +10780,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                          style="line-height: 25px; height: 25px; font-size: 60%; padding: 0px 1.5rem;"/ id="show_qr_code">
                     </span>
 
-                    <p>This is the address you give to third parties to send aeon/monero to you.
+                    <p>This is the address you give to third parties to send uaicoin to you.
                         <br><b>It is the only information here that's meant to be public.</b>
                     </p>
                 </div>
@@ -10797,7 +10797,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                 <div class="card-content pink-text text-darken-5">
                     <span class="card-title pink-text text-darken-5">Mnemonic seed</span>
                     <p>
-                        The mnemonic seed is a string that comprises 24 (Aeon) or 25 (Monero) words and allows you to recreate your
+                        The mnemonic seed is a string that comprises 25 words and allows you to recreate your
                         private keys. <b>Keep it secure!</b>
                     </p>
                 </div>
@@ -10811,7 +10811,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
         <div class="col s12">
             <div class="card indigo lighten-5">
                 <div class="card-content indigo-text text-darken-4">
-                    <span class="card-title indigo-text text-darken-4">Private keys (optional)</span>
+                    <span class="card-title indigo-text text-darken-4">Private keys</span>
 
                     <p>
                         The spend key and view key are the raw private keys for the
@@ -10850,7 +10850,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                     Made by moneromooo, based on code from <a href="https://mymonero.com/">MyMonero</a>. Copyright notices in the source.
                     <br>
                     Thanks to antanst for the CSS, and to luigi1111 for crypto fixes and improvements.
-                    <br>
+                    <!--<br>
                     If you found this useful, a donation would be appreciated:
                     <br>
                 <pre>Monero: 4AfUP827TeRZ1cck3tZThgZbRCEwBrpcJTkA1LCiyFVuMH4b5y59bKMZHGb9y58K3gSjWDCBsB4RkGsGDhsmMG5R2qmbLeW</pre>
@@ -10858,7 +10858,7 @@ bC0zLjUsMjAuNGgtNkwyNDQuOCwzMTAuNkwyNDQuOCwzMTAuNnoiLz4KPC9nPgo8L3N2Zz4K">
                 <pre>Aeon: WmtXcFZj5iGY21JxAtFsJVQmQQyo7jgoJP8V4zLWVzDeeTfvbP8Mzb5gbNpQEc6BkeUYUqjGntHDSDyA6LKjdGBQ1w9iEpfVw</pre>
 
                 <br>
-                Thanks, and welcome to Monero!
+                Thanks, and welcome to Monero!-->
                 </p>
 <!--<h5 id="gpg-instructions">How to verify GPG signatures</h5>
 
